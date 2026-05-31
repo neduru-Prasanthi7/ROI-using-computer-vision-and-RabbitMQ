@@ -382,7 +382,7 @@ Check ROI
  Event
 ```
 
-Only detections inside the ROI are considered valid.
+# Only detections inside the ROI are considered valid.
 
 ### Advantages
 
@@ -400,14 +400,6 @@ Only detections inside the ROI are considered valid.
 
 Validated detections are stored in Redis.
 
-### Example Keys
-
-```text
-vehicle_frames
-fire_smoke_frames
-helmet_jacket_frames
-person_frames
-```
 
 ### Stored Information
 
@@ -432,73 +424,6 @@ person_frames
 | ROI Analytics | Zone-Based Event Detection |
 
 ---
-
-# 📸 Sample Outputs
-
-## System Architecture
-
-```markdown
-![Architecture](assets/architecture.png)
-```
-
-## Vehicle Detection
-
-```markdown
-![Vehicle Detection](assets/vehicle_detection.png)
-```
-
-## Fire & Smoke Detection
-
-```markdown
-![Fire Detection](assets/fire_detection.png)
-```
-
-## Person Segmentation
-
-```markdown
-![Segmentation](assets/person_segmentation.png)
-```
-
-## ROI Validation
-
-```markdown
-![ROI](assets/roi_validation.png)
-```
-
----
-
-# 📂 Project Structure
-
-```text
-project/
-│
-├── config/
-│   ├── config.py
-│   └── camera_config.json
-│
-├── producers/
-│   └── frame_producer.py
-│
-├── consumers/
-│   ├── detection_consumer.py
-│   ├── segmentation_consumer.py
-│   └── roi_consumer.py
-│
-├── models/
-│   ├── yolov7_detection.pt
-│   └── yolov7_segmentation.pt
-│
-├── assets/
-│   ├── architecture.png
-│   ├── vehicle_detection.png
-│   ├── fire_detection.png
-│   ├── person_segmentation.png
-│   └── roi_validation.png
-│
-├── README.md
-│
-└── requirements.txt
-```
 
 ---
 
@@ -528,31 +453,27 @@ project/
 
 ---
 
+# 🎯 Conclusion
+
+This project demonstrates the development of a scalable and intelligent video analytics system capable of processing multiple camera streams in real-time. By integrating YOLOv7 Detection, YOLOv7 Segmentation, RabbitMQ, Redis, and ROI-based filtering, the system efficiently identifies and stores only relevant events.
+
+The distributed architecture ensures high performance, scalability, and modularity, making it suitable for applications such as:
+
+- Smart Surveillance
+- Industrial Safety Monitoring
+- Fire and Smoke Detection
+- PPE Compliance Monitoring
+- Vehicle Monitoring and Analytics
+
+Through ROI-based validation and event-driven processing, the system significantly reduces false detections and unnecessary storage while improving the overall accuracy and efficiency of video analytics.
+
+---
+
 # 👨‍💻 Author
 
 **Sai Prasanthi N**
 
-AI/ML Engineer | Computer Vision Engineer
-
-### Skills Demonstrated
-
-🐍 Python
-
-👁️ OpenCV
-
-🤖 YOLOv7
-
-🧠 Deep Learning
-
-📨 RabbitMQ
-
-⚡ Redis
-
-🎯 Computer Vision
-
-🔄 Multi-threading
-
-📹 Real-Time Video Analytics
+# Data Science | AI/ML Engineer 
 
 ---
 
