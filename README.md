@@ -45,43 +45,67 @@ To overcome these challenges, this project introduces an **ROI-Based Detection P
 
 ---
 
-# ✨ Key Features
+# 🎯 Objectives
 
-✅ Multi-camera video processing
-
-✅ Multi-threaded architecture
-
-✅ Redis-based configuration caching
-
-✅ RabbitMQ producer-consumer architecture
-
-✅ YOLOv7 object detection
-
-✅ YOLOv7 person segmentation
-
-✅ ROI-based event filtering
-
-✅ Base64 frame transmission
-
-✅ Distributed processing pipeline
-
-✅ Real-time event monitoring
+- Process multiple camera streams simultaneously.
+- Detect objects using a custom-trained YOLOv7 model.
+- Perform person segmentation using YOLOv7 Segmentation.
+- Apply ROI-based filtering.
+- Store only valid events.
+- Build a scalable distributed architecture using RabbitMQ and Redis.
 
 ---
 
-# 🛠️ Technology Stack
+# 🧠 Deep Learning Model Development
 
-| Technology | Purpose |
-|------------|----------|
-| Python | Core Development |
-| OpenCV | Video Processing |
-| YOLOv7 | Object Detection |
-| YOLOv7 Segmentation | Person Segmentation |
-| RabbitMQ | Message Broker |
-| Redis | Data Storage & Caching |
-| JSON | Camera Configuration |
-| Base64 | Frame Serialization |
-| Multi-threading | Parallel Camera Processing |
+## Dataset Collection
+
+Collected and prepared a custom dataset containing:
+
+- 🚶 Person
+- 🚗 Car
+- 🏍️ Bike
+- 🦺 Helmet
+- 👕 Jacket
+- 🔥 Fire
+- 🌫️ Smoke
+
+---
+
+## Data Annotation
+
+Images were annotated using **LabelImg**.
+
+Each image was labeled with corresponding object classes and bounding boxes.
+
+---
+
+## Model Training
+
+A custom **YOLOv7 Object Detection Model** was trained on the annotated dataset.
+
+### Classes Trained
+
+| Class ID | Class Name |
+|-----------|------------|
+| 0 | Person |
+| 1 | Car |
+| 2 | Bike |
+| 3 | Helmet |
+| 4 | Jacket |
+| 5 | Fire |
+| 6 | Smoke |
+
+### Output
+
+After training:
+
+```bash
+best.pt
+```
+
+was generated and used for real-time inference.
+
 
 ---
 
@@ -427,6 +451,50 @@ Validated detections are stored in Redis.
 
 ---
 
+# 🎯 Key Features
+
+✅ Custom YOLOv7 Training
+
+✅ Real-Time Object Detection
+
+✅ Real-Time Person Segmentation
+
+✅ ROI-Based Filtering
+
+✅ RabbitMQ Distributed Architecture
+
+✅ Redis-Based Event Storage
+
+✅ Multi-Camera Processing
+
+✅ Fire & Smoke Detection
+
+✅ Vehicle Monitoring
+
+✅ Helmet & Jacket Compliance Monitoring
+
+✅ Multiprocessing & Multithreading
+
+✅ Scalable Producer-Consumer Architecture
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Core Development |
+| OpenCV | Video Processing |
+| YOLOv7 | Object Detection |
+| YOLOv7 Segmentation | Person Segmentation |
+| RabbitMQ | Message Broker |
+| Redis | Caching & Storage |
+| LabelImg | Image Annotation |
+| Multiprocessing | Parallel Processing |
+| Multithreading | Camera Handling |
+
+---
+
 # 🚀 Future Enhancements
 
 - Multi-Object Tracking (DeepSORT)
@@ -441,6 +509,37 @@ Validated detections are stored in Redis.
 - Cloud Deployment (AWS/Azure/GCP)
 
 ---
+
+# 🌍 Real-World Applications
+
+### 🏭 Industrial Safety
+
+- Helmet Detection
+- Jacket Detection
+- Worker Monitoring
+
+### 🔥 Fire Safety
+
+- Fire Detection
+- Smoke Detection
+
+### 🚗 Traffic Monitoring
+
+- Vehicle Detection
+- Vehicle Analytics
+
+### 🎥 Smart Surveillance
+
+- Restricted Area Monitoring
+- Intelligent Security Systems
+
+### 🏙️ Smart Cities
+
+- Public Safety Monitoring
+- Automated Event Detection
+
+---
+
 
 # 🏆 Project Achievements
 
