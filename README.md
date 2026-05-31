@@ -473,8 +473,8 @@ Through ROI-based validation and event-driven processing, the system significant
 
 **Sai Prasanthi N**
 
-# Data Science | AI/ML Engineer 
+Data Science | AI/ML Engineer 
+Gmail : nedurusaiprasanthi13@gmail.com
+LinkedIn : https://www.linkedin.com/in/sai-prasanthi-neduru-375b99303
 
 ---
-
-⭐ If you found this project useful, consider giving it a star on GitHub.
